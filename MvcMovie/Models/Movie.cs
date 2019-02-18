@@ -12,11 +12,11 @@ namespace MvcMovie.Models
         public int Id { get; set; }
 
         public string Title { get; set; }
-        
+
         /// <summary>
         /// 发布日期
         /// </summary>
-        [Display(Name ="Release Data")]
+        [Display(Name = "Release Data")]
         [DataType(DataType.Date)]
         public DateTime ReleaseDate { get; set; }
 
@@ -28,8 +28,9 @@ namespace MvcMovie.Models
         /// <summary>
         /// 价格
         /// </summary>
-        [Column(TypeName ="decimal(18,2)")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
 
+        public string Rating { get; set; }
     }
 }
