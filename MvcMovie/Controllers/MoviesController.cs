@@ -18,7 +18,7 @@ namespace MvcMovie.Controllers
             _context = context;
         }
 
-        // GET: Movies
+        ////GET: Movies
         //public async Task<IActionResult> Index()
         //{
         //    return View(await _context.Movie.ToListAsync());
