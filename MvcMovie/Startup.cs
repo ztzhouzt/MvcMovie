@@ -57,10 +57,17 @@ namespace MvcMovie
 
             app.UseMvc(routes =>
             {
+                routes.MapAreaRoute("blog_route", "Blog", "Manage/{controller}/{action}/{id?}");
+            });
+
+
+            app.UseMvc(routes =>
+            {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            //app.UseMvcWithDefaultRoute();
         }
     }
 }

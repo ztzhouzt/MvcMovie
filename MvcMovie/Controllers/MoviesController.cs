@@ -64,7 +64,7 @@ namespace MvcMovie.Controllers
         }
 
         [HttpPost]
-        public string Index(string searchString,bool notUsed)
+        public string Index(string searchString, bool notUsed)
         {
             return "From [HttpPost]Index: filter on" + searchString;
         }
@@ -84,7 +84,6 @@ namespace MvcMovie.Controllers
             {
                 return NotFound();
             }
-
             return View(movie);
         }
 
@@ -105,7 +104,7 @@ namespace MvcMovie.Controllers
             {
                 _context.Add(movie);
                 await _context.SaveChangesAsync();
-                
+
                 return RedirectToAction(nameof(Index));
             }
             return View(movie);
